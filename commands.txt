@@ -1,0 +1,4 @@
+gphoto2 --skip-existing --capture-tethered --keep-raw --set-config capturetarget=1 --hook-script test-hook.sh
+
+
+gphoto2 --new
