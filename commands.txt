@@ -1,3 +1,4 @@
+gphoto2 --skip-existing --capture-tethered --keep-raw --set-config capturetarget=1  --filename "%F/%Y%m%d%H%M%S.jpg" --hook-script test-hook.sh
 gphoto2 --skip-existing --capture-tethered --keep-raw --set-config capturetarget=1 --hook-script test-hook.sh
 
 gphoto2 --new --get-all-files
