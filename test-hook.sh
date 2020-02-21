@@ -8,7 +8,9 @@ if [[ $ARGUMENT =~ .+\.[jpg|JPG] ]]
     # /usr/bin/shotwell "$ARGUMENT" &
     DIRNAME=$(dirname "$ARGUMENT")
     BASENAME=$(basename "$ARGUMENT")
-    NEWFILENAME="$DIRNAME/flask-app/_tmp/$BASENAME"
+    NEWFILENAME="$DIRNAME/flask-app/_tmp/full/$BASENAME"
 
-    sudo mv "$ARGUMENT" "$NEWFILENAME"    
+    sudo mv "$ARGUMENT" "$NEWFILENAME"
+
+    convert "$NEWFILENAME" -resize 150 "$DIRNAME/flask-app/_tmp/$ARGUMENT"
 fi
